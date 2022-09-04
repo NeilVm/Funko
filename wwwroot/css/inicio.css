@@ -1,0 +1,173 @@
+*, ::before,::after{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+body{
+    width: 100% ;
+    height: 100vh ;
+    font-family: sans-serif t;
+
+}
+
+.left-form{
+    width: 50% !important;
+    height: 100%;
+    overflow: hidden;
+    float: left;
+    background: #fff url('imagenes/ivan-moncada-dyBavEKJNHQ-unsplash\ 1.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.right-form{
+    width: 50% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    float: left !important;
+    background-color:#DEDEDE !important;
+    display: flex !important;
+    justify-content: center !important;
+
+}
+
+.right-form form{
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center !important;
+    
+}
+
+.right-form h2{
+    font-size: 2em;
+    color: black;
+    margin: 20px 0;
+    font-weight: bold;
+    
+
+}
+
+.right-form form > input {
+width: 100%;
+padding: 10px 0;
+font-size: 0.8em;
+}
+
+.right-form label{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.check{
+    width: 100%;
+    margin: 20px 0;
+}
+
+.fcc-btn {
+    background: linear-gradient(180deg, #0DE97B 40.63%, #21DD7F 76.04%);
+    color: white;
+    padding: 15px 100px;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+  
+  .fcc-btn:hover {
+    
+    color: white;
+    text-decoration: none;
+  }
+
+  .contraseña-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 360px;
+    background-color: white;
+    position: relative;
+   
+  }
+
+  .passw{
+    outline: none;
+    width: 100%;
+    background-color: white;
+    border: none;    
+    position: absolute;
+    top: 8px;
+    left: 0;
+    right: 0;
+    bottom: 8px;
+    padding-left: .5em;
+    font-size: 0.8em    ;
+  }
+
+  .icon{
+    position: absolute;
+    height: 60%;
+    top:50%;
+    right: 8px;
+    transform: translateY(-50%);
+    opacity: 0.3;
+    cursor: pointer;
+  }
+
+  .icon:hover{
+    opacity: 0.8;
+  }
+
+  .olvidar{
+    font-size: 0.8em;
+    
+  }
+
+  .facebook{
+    background: #5c5c5c;
+    color: white;
+    padding: 8px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+
+    
+    
+  }
+
+  .facebook:hover{
+    background: #004EC4;
+    color: white;
+    text-decoration: none;
+  }
+
+  .google{
+    background: #5c5c5c;
+    color: white;
+    padding: 8px 25px ;
+    text-decoration: none;
+    border-radius: 6px;
+    
+  }
+
+  .google:hover{
+    background: #AE0909;
+    color: white;
+    text-decoration: none;
+  }
+
+@media only screen and(max-with:768px){
+    .left-form{
+        display: none;
+    }
+
+    .right-form{
+        width: 100%;
+    }
+    .right-form form{
+        width: 95%;
+        padding: 0 1em;
+    }
+}
