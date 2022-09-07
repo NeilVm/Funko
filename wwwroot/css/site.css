@@ -15,4 +15,8 @@ html {
 
 body {
   margin-bottom: 60px;
-}
+ }
+ *{
+  margin:0px ;
+  padding: 0px;
+ }
