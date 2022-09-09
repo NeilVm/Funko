@@ -13,7 +13,7 @@ env:
   HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
 
 jobs:
-  buildwebapp:
+  build_webapp:
     runs-on: ubuntu-latest
     steps:
 
@@ -21,7 +21,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Docker build
-      run: docker login --username= --password=$HEROKU_API_KEY registry.heroku.com
+      run: docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
 
 
     - name: Publish
