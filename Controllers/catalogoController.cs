@@ -35,6 +35,33 @@ namespace Funko.Controllers
 
             return View(await producto.ToListAsync());
         }
+
+         public async Task<IActionResult> Details(int? id){
+            catalogo objProduct = await _context.Datacatalogo.FindAsync(id);
+            if(objProduct == null){
+                return NotFound();
+            }
+            return View(objProduct);
+        }
+
+        public async Task<IActionResult> Add(int? id){
+            var userID = _userManager.GetUserName(User);
+            if(userID == null){
+                ViewData["Message"] ="Por favor debe loguearse antes de agregar un producto";
+                List<catalogo> productos = new List<catalogo>();
+                return View("Index",productos);
+            }else{
+                var producto = await _context.Datacatalogo.FindAsync(id);
+                Proforma proforma =new Proforma();                
+                proforma.Producto = producto;
+                proforma.Precio=producto.Precio;
+                proforma.Cantidad=1;
+                proforma.UserID=userID;
+                _context.Add(proforma);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+        }
         
     }
 }
