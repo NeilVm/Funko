@@ -7,7 +7,6 @@ using Funko.Models;
 using Funko.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
-
 using Microsoft.AspNetCore.Identity;
 using System.Dynamic;
 
