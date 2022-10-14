@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using System.Dynamic;
 
+
 namespace Funko.Controllers
 {
     public class catalogoController: Controller
