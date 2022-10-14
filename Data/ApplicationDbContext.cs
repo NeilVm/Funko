@@ -12,4 +12,7 @@ public class ApplicationDbContext : IdentityDbContext
     
     }
     public DbSet<Funko.Models.catalogo> Datacatalogo { get; set; }
+    public DbSet<Funko.Models.Proforma> DataProforma { get; set; }
+  
+    public DbSet<Funko.Models.Pago> DataPago { get; set;}
 }
