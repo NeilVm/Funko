@@ -16,5 +16,7 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<Funko.Models.Pago> DataPago { get; set;}
     public DbSet<Funko.Models.Pedido> DataPedido { get; set; }
     public DbSet<Funko.Models.DetallePedido> DataDetallePedido { get; set; }
+
+   public DbSet<Funko.Models.Contacto> DataContactos { get; set; }
     
 }
