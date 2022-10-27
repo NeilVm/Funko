@@ -27,6 +27,10 @@ namespace Funko.Controllers
         public IActionResult Index(){
             return View();
         }
+        public IActionResult Menupreguntas()
+    {
+        return View();
+    }
 
     }
 }
