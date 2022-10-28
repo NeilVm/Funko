@@ -24,7 +24,7 @@ namespace Funko.Controllers
             _logger = logger;
             _userManager= userManager;
         } 
-        public async Task<IActionResult> Index(string? searchString){
+        public async Task<IActionResult> Index(string? searchString,string? searchString2){
             
             var producto = from o in _context.Datacatalogo select o;
 
@@ -34,9 +34,16 @@ namespace Funko.Controllers
             }
              producto =producto.Where( s => s.Status.Contains("A"));
 
+             if(!String.IsNullOrEmpty(searchString2)){
+
+                producto =producto.Where( s => s.Categoria.Contains(searchString2));
+            }
+             producto =producto.Where( s => s.Status.Contains("A"));
+
             return View(await producto.ToListAsync());
         }
 
+        
          public async Task<IActionResult> Details(int? id){
             catalogo objProduct = await _context.Datacatalogo.FindAsync(id);
             if(objProduct == null){
@@ -44,6 +51,7 @@ namespace Funko.Controllers
             }
             return View(objProduct);
         }
+
 
         public async Task<IActionResult> Add(int? id){
             var userID = _userManager.GetUserName(User);

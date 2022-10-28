@@ -55,7 +55,7 @@ namespace Funko.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Precio,Descripcion,ImagenName,Status")] catalogo producto)
+        public async Task<IActionResult> Create([Bind("Id,Name,Precio,Descripcion,ImagenName,Status,Categoria")] catalogo producto)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace Funko.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Precio,Descripcion,ImagenName,Status")] catalogo producto)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Precio,Descripcion,ImagenName,Status,Categoria")] catalogo producto)
         {
             if (id != producto.Id)
             {

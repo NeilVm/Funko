@@ -23,5 +23,9 @@ namespace Funko.Models
          public String ImagenName { get; set; }
     [Column("Status")]
          public String Status { get; set; }   
+    [Column("Categoria")]
+         public String Categoria { get; set; }   
     }
+    
+    
 }

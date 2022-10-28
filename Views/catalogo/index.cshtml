@@ -5,10 +5,22 @@
 
 <br>
 
-
-
-
 <h1>@ViewData["Title"]</h1>
+    <form asp-controller="catalogo" asp-action="index">   
+    <div class="container">
+  <div class="row">    
+    <div class="col">
+     <input type="submit" class="btn btn-outline-secondary" aria-label="searchString2" name="searchString2" value="Marvel">
+    </div>
+    <div class="col">
+       <input type="submit" class="btn btn-outline-secondary" aria-label="searchString2" name="searchString2" value="Game">  
+    </div>
+    <div class="col">
+    <input type="submit" class="btn btn-outline-secondary" aria-label="searchString2" name="searchString2" value="anime">  
+    </div>
+  </div>                                        
+    </form>
+    
 <div class="container">
 <h1>@ViewData["Message"]</h1>
 <div class="row">

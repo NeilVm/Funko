@@ -31,6 +31,11 @@ namespace Funko.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Categoria")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("Categoria");
+
                     b.Property<string>("Descripcion")
                         .IsRequired()
                         .HasColumnType("text")
