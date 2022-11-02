@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Http;
 
 using Microsoft.AspNetCore.Identity;
 using System.Dynamic;
-namespace appproy.Controllers
+namespace Funko.Controllers
 {
     public class ContactoController: Controller
     {
