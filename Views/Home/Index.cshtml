@@ -1,5 +1,63 @@
-﻿@{
+﻿@model IEnumerable<Funko.Models.catalogo>
+@{
     ViewData["Title"] = "Funko Adicction";
 }
 
+     <form asp-controller="Home" asp-action="index">
+         
+                 <div class="form-outline">
+                     <input type="text" id="searchString" class="form-control" placeholder="Buscar" aria-label="searchString" name="searchString"/>
+                </div>
+            </form>
+ 
+<h1>@ViewData["Title"]</h1>
+    <form asp-controller="Home" asp-action="index">   
+    <div class="container">
+  <div class="row">    
+    <div class="col">
+     <input type="submit" class="btn btn-outline-secondary" aria-label="searchString2" name="searchString2" value="Marvel">
+    </div>
+    <div class="col">
+       <input type="submit" class="btn btn-outline-secondary" aria-label="searchString2" name="searchString2" value="Game">  
+    </div>
+    <div class="col">
+    <input type="submit" class="btn btn-outline-secondary" aria-label="searchString2" name="searchString2" value="anime">  
+    </div>
+  </div>                                        
+    </form>
+    
+<div class="container">
+<h1>@ViewData["Message"]</h1>
+<div class="row">
+    <div class="col">
+        <div id="product" class="mb-3">
+            <div class="row">
+                @foreach(var item in Model){
+                    <div class="col-sm-4">
+                        <div class="card-body">
+                            <div class="card-img-actions">
+                                <img class="img-responsive" width="200" height="250" src="/imagenes/@item.ImagenName" alt="@item.ImagenName"/>
+                            
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                            <p class="card-text">S/@Html.DisplayFor(modelItem => item.Precio)</p>
+                            <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id">Añadir</a>
+                            <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Ver</a>
 
+                        </div>
+                    </div>
+                
+                }
+            </div>
+             
+        </div>
+
+    </div>
+
+</div>
+</div>
+<br>
+<br>
+<br>

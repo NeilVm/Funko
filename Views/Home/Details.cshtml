@@ -1,0 +1,61 @@
+@model Funko.Models.catalogo
+
+
+
+@{
+    ViewData["Title"] = "Detalles del producto";
+}
+<br>
+
+<h1>@Html.DisplayFor(model => model.Name)</h1>
+
+<div class="row">
+    <div class="col-sm-8">
+        <div class="card border-primary mb-3 text-center" style="max-width: 50rem;">
+            <div class="card-body">
+                <div class="card-img-actions" >
+                    <img class="img-responsive" width="350" height="450" src="/imagenes/@Html.DisplayFor(model => model.ImagenName)" alt="@Html.DisplayFor(model => model.ImagenName)" />
+
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="col-sm-4 " >
+        <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-body">
+                <h5 class="card-header text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@Html.DisplayFor(model => model.Name)</font></font></h5>
+                <br>
+                <h5 class="card-title">@Html.DisplayFor(model => model.Name)</h5>
+                <p class="card-text">@Html.DisplayFor(model => model.Descripcion)</p>
+                <h5 class="card-title">@Html.DisplayFor(model => model.Precio)</h5>
+
+                
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Desplegable</font></font></a>
+                    <div class="dropdown-menu" style="">
+                        <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></a>
+                        <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></a>
+                        <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></a>
+                    </div>
+
+               
+        <form asp-action="Add">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="AÑADIR" class="btn btn-outline-dark"/>        
+        </form>
+              
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+
+</div>
+
+
+<br>
+<br>
+<br>
