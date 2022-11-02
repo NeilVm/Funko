@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;  
+   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='2.89' height='5' viewBox='0 0 34.64101615137755 60' patternUnits='userSpaceOnUse' patternTransform='rotate(135)'%3E%3Crect width='100%25' height='100%25' fill='rgba(26, 32, 44,1)'/%3E%3Cpath d='M36.37 39L36.37 41L32.91 39L34.64 38L34.64 42L32.91 41L34.64 40z' stroke-linejoin='miter' fill='%231a202c'/%3E%3Cpath d='M19.05 49L19.05 51L15.59 49L17.32 48L17.32 52L15.59 51L17.32 50z' stroke-linejoin='miter' fill='%231a202c'/%3E%3Cpath d='M1.73 39L1.73 41L-1.73 39L0 38L0 42L-1.73 41L0 40z' stroke-linejoin='miter' fill='%231a202c'/%3E%3Cpath d='M1.73 19L1.73 21L-1.73 19L0 18L0 22L-1.73 21L0 20z' stroke-linejoin='miter' fill='%231a202c'/%3E%3Cpath d='M19.05 9L19.05 11L15.59 9L17.32 8L17.32 12L15.59 11L17.32 10z' stroke-linejoin='miter' fill='%231a202c'/%3E%3Cpath d='M36.37 19L36.37 21L32.91 19L34.64 18L34.64 22L32.91 21L34.64 20z' stroke-linejoin='miter' fill='%231a202c'/%3E%3Cpath d='M34.64 41L35.51 40.5L33.77 39.5L33.77 40.5L35.51 39.5L34.64 39L34.64 40z' stroke-linejoin='miter' fill='rgba(26, 32, 44,1)'/%3E%3Cpath d='M17.32 51L18.19 50.5L16.45 49.5L16.45 50.5L18.19 49.5L17.32 49L17.32 50z' stroke-linejoin='miter' fill='rgba(26, 32, 44,1)'/%3E%3Cpath d='M0 41L0.87 40.5L-0.87 39.5L-0.87 40.5L0.87 39.5L0 39L0 40z' stroke-linejoin='miter' fill='rgba(26, 32, 44,1)'/%3E%3Cpath d='M0 21L0.87 20.5L-0.87 19.5L-0.87 20.5L0.87 19.5L0 19L0 20z' stroke-linejoin='miter' fill='rgba(26, 32, 44,1)'/%3E%3Cpath d='M17.32 11L18.19 10.5L16.45 9.5L16.45 10.5L18.19 9.5L17.32 9L17.32 10z' stroke-linejoin='miter' fill='rgba(26, 32, 44,1)'/%3E%3Cpath d='M34.64 21L35.51 20.5L33.77 19.5L33.77 20.5L35.51 19.5L34.64 19L34.64 20z' stroke-linejoin='miter' fill='rgba(26, 32, 44,1)'/%3E%3Cpath d='M17.32 30L17.32 30L17.32 30L17.32 30L17.32 30L17.32 30L17.32 30z' stroke-linejoin='miter' fill='%231a202c'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+    display: flex;
+    min-height: 100vh;
+
+}
+
+.form{
+    background-color: #ffff;
+    margin: 20px 30px 400px 700px;
+    width: 90%;
+    max-width: 400px;
+    padding: 1em 2em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 /30%);
+    text-align: center;
+}
+
+.img{
+    max-width: 100%;
+    max-height: 100%;
+    width: 500px;
+    height: 604px;
+    position: absolute;
+    top: 20px;
+    left: 185px;
+    border-radius: 10px 10px 10px 10px; 
+    
+  }
+
+.form_title{
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+}
+
+.form_subtitle{
+    font-size: 1.5rem;
+    margin-bottom: 0.8em;
+}
+
+.form_paragraph{
+    font-weight: 3rem;
+    margin-bottom: 0em;
+
+}
+
+.form_link{
+    font-weight: 400;
+    color: #000;
+}
+
+.form_container{
+    margin-top: 4em;
+    display: grid;
+    gap: 2.8em;
+}
+
+.form_group{
+    position: relative;
+    --color: #5757577e;
+}
+
+
+.form_input{
+    width: 100%;
+    background: none;
+    color: #786c6c;
+    font-size: 1rem;
+    padding: .9em .5em ;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: 'Roboto', sans-serif; 
+}
+
+.form_input:focus,
+.form_input:not(:placeholder-shown){
+    color: #4d4646;
+}
+
+.form_input:focus + .form_label,
+.form_input:not(:placeholder-shown)+ .form_label{
+    transform: translate(-12px) scale(.7);
+    transform-origin: left top;
+    color: #3866f2;
+}
+
+.form_label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s,color .3s;
+}
+
+.form_submit{
+    background: #3866f2;
+    color: #ffff;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 300 ;
+    font-size: 1rem;
+    padding: .6em 0;
+    border: none;
+    border-radius: .5em;
+    
+}
+
+.form_line{
+    position: none;
+    border: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #3866f2;
+    transform: scale(0);
+    transform: left bottom;
+    transition:transform .4s;
+}
+
+.form_input ~.form_label,
+.form_input:not(:placeholder-shown) ~ .form_line{
+    transform: scale(1);
+}
+
+@media(max-width: 425px){
+    
+     .form_title{
+        font-size: 1.8rem;
+     }
+
+}
+
+
+
+.redes{
+    height: 10px;
+    background: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding :center;
+}
+
+.redes .fab{
+    margin: 0 15px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    background: #000;
+    border-radius: 50%;
+    color:white;
+    cursor: pointer;
+    box-shadow: 0 0 6px rgb(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.redes .icon1:hover{
+    background:#3b5998;
+    }
+
+.redes .icon2:hover{
+    background:#db1f1f;
+    }
